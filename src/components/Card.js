@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 
 export const Card = ({ movie }) => {
   const { id, original_title, overview, poster_path } = movie;
-  const images = `https://image.tmdb.org/t/p/w500/${poster_path}`;
+  const images = poster_path
+    ? `https://image.tmdb.org/t/p/w500/${poster_path}`
+    : "https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg";
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 m-3">
       <Link to={`/movie/${id}`}>

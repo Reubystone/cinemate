@@ -7,7 +7,7 @@ export const MovieList = () => {
   useEffect(() => {
     async function fetchMovies() {
       const response = await fetch(
-        "https://api.themoviedb.org/3/movie/now_playing?api_key=aca0167673d123ea69794140430187e4"
+        "https://api.themoviedb.org/3/movie/now_playing?api_key=aca0167673d123ea69794140430187e4&language=en-US"
       );
 
       const data = await response.json();
