@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
+import React from "react";
 
 export const Header = () => {
   const [hidden, setHidden] = useState(true);
@@ -23,7 +24,7 @@ export const Header = () => {
     "text-base block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
 
   return (
-    <header className="sticky">
+    <header>
       <nav className="bg-white  border-gray-200 border-b-2 dark:bg-gray-900 dark:border-b-4 dark:border-gray-500">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
